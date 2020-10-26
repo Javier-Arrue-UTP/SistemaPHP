@@ -1,0 +1,63 @@
+header, main, footer {
+    padding-left: 300px;
+  }
+
+#top-title{
+    margin-left: 5%;
+}
+
+.contenido{
+    height:100vh;
+}
+
+nav{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+#name, #email {
+
+    font-size: larger;
+}
+
+.usuarios{
+    margin: auto;
+    display: block;
+  
+}
+
+#contenido-carta{
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+#usuarios-icon, #usuarios-titulo{
+    color:white;
+}
+#contenido-carta:hover #usuarios-icon{
+    color: white;transition: 0.5s;
+}
+#contenido-carta:hover #usuarios-titulo{
+    color: white;transition: 0.5s;
+
+}
+
+footer{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+
+    #top-title{
+        margin-left: 7%;
+    }
+  }

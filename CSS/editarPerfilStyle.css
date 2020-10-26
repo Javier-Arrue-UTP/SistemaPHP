@@ -1,0 +1,83 @@
+header, main,footer {
+    padding-left: 300px;
+  }
+
+main {
+    height: 100vh;
+    margin-top: 60px;
+  }
+
+#top-title{
+    margin-left: 5%;
+}
+nav{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+footer{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#name, #email {
+
+    font-size: larger;
+}
+
+#usuarios-icon, #usuarios-titulo{
+    color:black;
+}
+
+#foto-usuario{
+    height: 120px;
+}
+
+
+#btn-foto{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#editar-btn{
+    position: absolute;
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#formulario{
+    margin-top: 8%;
+}
+
+#cerrar-modal{
+    color:black;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(180, 24, 24);;
+}
+
+#guardar-modal{
+    background-color: rgb(180, 24, 24);
+}
+
+@media only screen and (max-width : 992px) {
+    header, main,footer {
+      padding-left: 0;
+    }
+
+    #top-title{
+        margin-left: 7%;
+    }
+  }

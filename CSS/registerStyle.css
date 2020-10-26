@@ -1,0 +1,46 @@
+#contenido{
+    margin-bottom: 0;
+}
+
+#columna1{
+    height:100vh;
+    background-image: url("../Imagenes/1.jpg");
+    background-size: cover;
+}
+
+#columna2{
+    height:100vh;
+}
+
+form{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+footer{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#btnLogin{
+    background-color: aliceblue;
+    color:black;
+
+}
+
+#btnLogin:hover{
+    background-color: rgba(145, 14, 14, 0);
+    color:white;
+    border: 1px solid white;
+}
+
+#btnRegister{
+    background-color:rgb(183, 28, 28);
+    width:200px;
+}
+
+#btnRegister:hover{
+    background-color:rgb(255, 38, 38);
+}
