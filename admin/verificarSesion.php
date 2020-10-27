@@ -3,7 +3,7 @@
 
     //Verificar que la sesion existe.
     if(!isset($_SESSION['sw'])){
-        header("Location: /sistema");
+        header("Location: /JavierArrue");
     }
 
 
