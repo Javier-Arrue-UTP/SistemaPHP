@@ -15,7 +15,7 @@
         if($tipo == "image/jpeg" || $tipo == "image/png"){
 
             $nuevoNombre = $row['id_usuario'].".png";
-            move_uploaded_file($temp, 'C:/xampp/htdocs/Sistema/Imagenes/usuarios/'.$nuevoNombre);
+            move_uploaded_file($temp, 'C:/xampp/htdocs/JavierArrue/Imagenes/usuarios/'.$nuevoNombre);
             $id = $row['id_usuario'];
         
             $queryUpdate = "UPDATE usuario SET foto = ? WHERE id_usuario = ? ";

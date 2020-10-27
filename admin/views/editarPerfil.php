@@ -12,8 +12,8 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled CSS -->
-    <link rel="stylesheet" href="/Sistema/CSS/materialize/css/materialize.css">
-    <link rel="stylesheet" href="/Sistema/CSS/editarPerfilStyle.css">
+    <link rel="stylesheet" href="/JavierArrue/CSS/materialize/css/materialize.css">
+    <link rel="stylesheet" href="/JavierArrue/CSS/editarPerfilStyle.css">
 
 </head>
 <body>
@@ -33,9 +33,9 @@
       <li>
         <div class="user-view">
           <div class="background">
-            <img src="/Sistema/Imagenes/3.jpg" class="fondo-perfil"> 
+            <img src="/JavierArrue/Imagenes/3.jpg" class="fondo-perfil"> 
           </div>
-          <a><img class="circle"  src="/Sistema/Imagenes/usuarios/<?php echo $row['foto'];?>"></a>
+          <a><img class="circle"  src="/JavierArrue/Imagenes/usuarios/<?php echo $row['foto'];?>"></a>
           <a><span class="white-text name" id="name"><?php echo $row['nombre']. " ".$row['apellido']?></span></a>
           <a><span class="white-text email" id="email"><?php echo $row['correo'];?></span></a>
         </div>
@@ -62,7 +62,7 @@
             <div class="row center">
                 <div class="col s12">
                     <div>
-                        <img class="circle hoverable"  src="/Sistema/Imagenes/usuarios/<?php echo $row['foto'];?>" id="foto-usuario">
+                        <img class="circle hoverable"  src="/JavierArrue/Imagenes/usuarios/<?php echo $row['foto'];?>" id="foto-usuario">
                         <!-- Modal Trigger -->
                         <a class="btn-floating btn waves-effect waves-light modal-trigger hoverable" id="editar-btn" data-target="modal1"><i class="material-icons">edit</i></a>
                     </div>
@@ -165,8 +165,8 @@
   </footer>
 
     <!-- Compiled and minified JavaScript -->
-    <script src="/Sistema/CSS/materialize/js/materialize.min.js"></script>
-    <script src="/Sistema/JS/editarPerfil.js"></script>
+    <script src="/JavierArrue/CSS/materialize/js/materialize.min.js"></script>
+    <script src="/JavierArrue/JS/editarPerfil.js"></script>
 
     <?php 
         if(isset($_GET['exito'])){

@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled CSS -->
-    <link rel="stylesheet" href="/Sistema/CSS/materialize/css/materialize.css">
-    <link rel="stylesheet" href="/Sistema/CSS/panelStyle.css">
+    <link rel="stylesheet" href="/JavierArrue/CSS/materialize/css/materialize.css">
+    <link rel="stylesheet" href="/JavierArrue/CSS/panelStyle.css">
 
     <title>Panel Administrador</title>
 </head>
@@ -36,9 +36,9 @@
       <li>
         <div class="user-view">
           <div class="background">
-            <img src="/Sistema/Imagenes/3.jpg" class="fondo-perfil"> 
+            <img src="/JavierArrue/Imagenes/3.jpg" class="fondo-perfil"> 
           </div>
-          <a><img class="circle" src="/Sistema/Imagenes/usuarios/<?php echo $row['foto'];?>"></a>
+          <a><img class="circle" src="/JavierArrue/Imagenes/usuarios/<?php echo $row['foto'];?>"></a>
           <a><span class="white-text name" id="name"><?php echo $row['nombre']. " ".$row['apellido']?></span></a>
           <a><span class="white-text email" id="email"><?php echo $row['correo']?></span></a>
         </div>
@@ -156,7 +156,7 @@
 
 
   <!-- Compiled and minified JavaScript -->
-  <script src="/Sistema/CSS/materialize/js/materialize.min.js"></script>
+  <script src="/JavierArrue/CSS/materialize/js/materialize.min.js"></script>
 
 
 
