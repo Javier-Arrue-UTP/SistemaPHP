@@ -9,12 +9,14 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
     $correo = $_REQUEST['email'];
     $pass = md5($_REQUEST['password1']);
     $foto = 'default.jpg';
+    $activacion = 0;
+    $hash = md5(rand(0,10000));
 
     try{
-        $sql = "INSERT INTO usuario (nombre, apellido, correo, password, foto) 
-        VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuario (nombre, apellido, correo, password, foto, activacion, hash) 
+        VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        if($stmt->execute([$nombre, $apellido,$correo, $pass, $foto])){
+        if($stmt->execute([$nombre, $apellido,$correo, $pass, $foto,$activacion,$hash])){
             echo '<meta http-equiv="refresh" content="0; url= ../index.php?exito=Tu cuenta ha sido creada">';
         }
         
