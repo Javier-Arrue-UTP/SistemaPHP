@@ -8,7 +8,7 @@
                 <title>Activacion de cuenta</title>
             </head>
             <body>
-                <h3>¡ Hola'.$nombre.' '. $apellido.'!</h3>
+                <h3>¡ Hola '.$nombre.' '. $apellido.' !</h3>
                 <p>Para activar tu cuenta accede al siguiente link</p>
                 <a href="http://localhost/JavierArrue/admin/activarUser.php?e='.$email.'&a='.$hash.'" target="_blank"> Activar Cuenta </a>
 

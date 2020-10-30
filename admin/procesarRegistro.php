@@ -19,6 +19,7 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
         $stmt = $conn->prepare($sql);
         if($stmt->execute([$nombre, $apellido,$correo, $pass, $foto,$activacion,$hash])){
             echo '<meta http-equiv="refresh" content="0; url= ../index.php?exito=Tu cuenta ha sido creada">';
+            enviarActivacion($correo,$hash,$nombre,$apellido); //Enviar link para activar cuenta
         }
         
     }catch(PDOException $e ){

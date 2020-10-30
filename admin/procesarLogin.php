@@ -12,7 +12,7 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
     //TODO: Hacer cookies.
 
     //Validacion en la base de datos
-    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ? AND hash = 1");
+    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ? AND activacion = 1");
     $result->execute([$email,$pass]);
     
     //Si existe:
@@ -31,12 +31,12 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
         //Nueva validacion para ver que fue lo que se ingreso mal.
         $nFilas = $conn->query("select*from usuario where correo='$email'")->fetchColumn();
 
-        //Si el correo EXISTE en la base de datos...
+        //Si el correo EXISTE en la base de datos... Contraseña Incorrecta
         if ($nFilas > 0 ){
             header("Location: ../index.php?msg=Contraseña incorrecta, intente nuevamente");
             exit;
         }else{
-            //Si no se encuentra el correo....
+            //Si no se encuentra el correo.... El usuario no existe
             header("Location: ../index.php?msg=Usuario no encontrado, intente nuevamente");
             exit;
         }
