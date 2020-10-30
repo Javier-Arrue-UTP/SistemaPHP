@@ -12,18 +12,29 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
     //TODO: Hacer cookies.
 
     //Validacion en la base de datos
-    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ? AND activacion = 1");
+    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ?");
     $result->execute([$email,$pass]);
     
     //Si existe:
     if($result->rowCount()>0){
-        
-        $row = $result->fetch();
-        //Creacion de sesion
-        $_SESSION['sw'] = true;
-        $_SESSION['id'] = $row['id_usuario'];
-        header("Location: ../Admin/views/panel.php");
-        exit;
+        //Nueva validacion para ver la activacion de la cuenta.
+        $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ? AND activacion = 1");
+        $result->execute([$email,$pass]);
+
+        //Si encuentra resultado, la cuenta ha sido activada.
+        if($result->rowCount()>0){
+            $row = $result->fetch();
+            //Creacion de sesion
+            $_SESSION['sw'] = true;
+            $_SESSION['id'] = $row['id_usuario'];
+            header("Location: ../Admin/views/panel.php");
+            exit;
+            //Si no encuentra resultado, la cuenta no ha sido activada.
+        }else{
+            header("Location: ../index.php?msg=La cuenta no ha sido activada");
+            exit;
+        }
+
         
     }//Si no existe:
     else{
