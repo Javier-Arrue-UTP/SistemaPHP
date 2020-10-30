@@ -23,6 +23,4 @@
         mail($para, $asunto, $mensaje, $cabeceras);
     }
 
-
-
 ?>
