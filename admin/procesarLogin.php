@@ -8,9 +8,11 @@ if(isset($_REQUEST['email']) && isset($_REQUEST['password1'])){
 
     $email = $_REQUEST['email'];
     $pass = md5($_REQUEST['password1']);
+    
+    //TODO: Hacer cookies.
 
     //Validacion en la base de datos
-    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ?");
+    $result = $conn->prepare("SELECT id_usuario FROM usuario WHERE correo=? AND password = ? AND hash = 1");
     $result->execute([$email,$pass]);
     
     //Si existe:
