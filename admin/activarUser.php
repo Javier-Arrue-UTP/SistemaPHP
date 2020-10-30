@@ -14,7 +14,10 @@
             $id = $row['id_usuario'];
             $sqlActivarUsuario = $conn->exec("UPDATE usuario set activacion = 1 WHERE id_usuario = '$id'");
 
-            echo "<h1>Su cuenta ha sido activada</h1>";
+            echo "
+            <h1>Su cuenta ha sido activada</h1>
+            <br>
+            <a href='../index.php'>Iniciar sesión</a>";
         }else{
             echo "Activacion fallida";
         }
